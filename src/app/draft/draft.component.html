@@ -1,0 +1,35 @@
+<input type="text" class="form-control" #number (keyup)="0">
+<div class="alert alert-danger mt-1" *ngIf="number.value != '' && number.value < 10">
+  <strong>Number is greater than 10</strong>
+</div>
+
+<!-- *ngFor -->
+<ul class="list-group mt-5">
+  <li class="list-group-item" *ngFor="let course of courses; let i = index">{{course}} {{i + 1}}</li>
+</ul>
+
+<div [ngSwitch]="toeChoice">
+  <div *ngSwitchCase="'abc'">Abc</div>
+  <div *ngSwitchCase="'def'">def</div>
+  <div *ngSwitchDefault>Default</div>
+</div>
+
+
+<h4>NgSwitch Component</h4>
+<ul class="nav nav-tabs">
+  <li role="presentation" [class.active]="tab === 'home'" on-click="switchTab($event)"><a href="#" data-value="home">Home</a></li>
+  <li role="presentation" [class.active]="tab === 'profile'" on-click="switchTab($event)"><a href="#" data-value="profile" >Profile</a></li>
+</ul>
+
+<div class="mt-1" [ngSwitch]="tab">
+  <div *ngSwitchCase="'home'">Home tab</div>
+  <div *ngSwitchCase="'profile'">Profile content</div>
+</div>
+
+<!--ngClass-->
+<div class="mt-5">
+  <h4>ngClass</h4>
+  <button class="btn btn-primary">
+    <span [ngClass]="{'glyphicon-th': !isList, 'glyphicon-th-list': isList}" class="glyphicon">Article</span>
+  </button>
+</div>

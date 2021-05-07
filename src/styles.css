@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+
+p.result {
+  padding: 16px;
+  border: 1px solid #e5e5e5;
+  background-color: #3B82F6;
+  color: white;
+}
+
+
+p.black {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+p.white {
+  background-color: #ffffff;
+  color: #0f0f0f;
+}

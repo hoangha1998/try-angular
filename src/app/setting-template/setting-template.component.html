@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Setting Template</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label>
+              <strong>Template</strong>
+            </label>
+            <select name="template" class="form-control" #theme (change)="0">
+              <option value="default">Default</option>
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="custom">Custom</option>
+            </select>
+          </div>
+          <div class="row" [class.hidden]="theme.value !== 'custom'">
+            <div class="col col-xs-6">
+              <label><strong>Background Color</strong></label>
+              <input type="color" class="form-control" #backgroundColor (change)="0">
+            </div>
+            <div class="col col-xs-6">
+              <label><strong>Text Color</strong></label>
+              <input type="color" value="#ffffff" class="form-control" #textColor (change)="0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Your Template</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label>
+              <strong>Your Text</strong>
+            </label>
+            <textarea class="form-control" name="content" [(ngModel)]="textDemo"></textarea>
+          </div>
+          <p *ngIf="theme.value !== 'custom'" class="result {{theme.value}}">{{textDemo}}</p>
+          <p *ngIf="theme.value === 'custom'" class="result {{theme.value}}"
+             [ngStyle] = "{
+              'background': backgroundColor.value,
+              'color': textColor.value
+             }"
+          >{{textDemo}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
