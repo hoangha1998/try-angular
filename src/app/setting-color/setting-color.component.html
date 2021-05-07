@@ -1,0 +1,20 @@
+<h2>Angular - Project 02: Setting Color</h2>
+<p>This project is for practice transform data between components </p>
+<div class="row">
+  <div class="col col-xs-12 col-md-4">
+    <div class="panel panel-warning">
+      <div class="panel-heading"><h4>AppComponent</h4></div>
+      <div class="panel-body">
+          <p [ngStyle]="setStyle()"><b>AppComponent</b></p>
+        <button class="btn btn-warning" (click)="control.onChaneColor('')">Reset</button>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="col col-xs-12 col-md-4">
+    <app-setting #control (changeColor)="onChangeColor($event)"></app-setting>
+  </div>
+  <div class="col col-xs-12 col-md-4">
+    <app-preview [textColor]="color"></app-preview>
+  </div>
+</div>

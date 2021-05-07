@@ -7,6 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { DraftComponent } from './draft/draft.component';
 import { SettingTemplateComponent } from './setting-template/setting-template.component';
 import {FormsModule} from '@angular/forms';
+import { InputDemoComponent } from './input-demo/input-demo.component';
+import { SettingColorComponent } from './setting-color/setting-color.component';
+import { SettingComponent } from './setting-color/setting/setting.component';
+import { PreviewComponent } from './setting-color/preview/preview.component';
 
 
 @NgModule({
@@ -15,6 +19,10 @@ import {FormsModule} from '@angular/forms';
     HeaderComponent,
     DraftComponent,
     SettingTemplateComponent,
+    InputDemoComponent,
+    SettingColorComponent,
+    SettingComponent,
+    PreviewComponent,
 
   ],
   imports: [

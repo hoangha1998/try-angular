@@ -11,6 +11,10 @@ export class DraftComponent implements OnInit {
   toeChoice = 'def';
   tab = 'home';
   isList = true;
+  title = 'Project 3 - Input property';
+  description = 'I want working at the Pixelz';
+  /*template tag*/
+  iShow = true;
 
   constructor() { }
 
@@ -18,6 +22,10 @@ export class DraftComponent implements OnInit {
   }
   switchTab(e): void {
     this.tab = e.target.getAttribute('data-value');
+  }
+
+  answer(e): void {
+    console.log(e);
   }
 
 }

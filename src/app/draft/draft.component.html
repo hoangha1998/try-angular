@@ -33,3 +33,16 @@
     <span [ngClass]="{'glyphicon-th': !isList, 'glyphicon-th-list': isList}" class="glyphicon">Article</span>
   </button>
 </div>
+
+
+<div class="mt-5">
+  <app-input-demo [title]="title" [description]="description" (answerRequest)="answer($event)"></app-input-demo>
+</div>
+
+
+<div class="mt-5">
+  <h3>Template tag</h3>
+  <div class="alert alert-danger" *ngIf="iShow">
+    dfdfdfdfdfd
+  </div>
+</div>

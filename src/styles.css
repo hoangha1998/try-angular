@@ -25,3 +25,8 @@ p.white {
   background-color: #ffffff;
   color: #0f0f0f;
 }
+
+
+.main-content {
+  padding: 60px 0;
+}
