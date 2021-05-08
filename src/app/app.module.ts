@@ -11,6 +11,10 @@ import { InputDemoComponent } from './input-demo/input-demo.component';
 import { SettingColorComponent } from './setting-color/setting-color.component';
 import { SettingComponent } from './setting-color/setting/setting.component';
 import { PreviewComponent } from './setting-color/preview/preview.component';
+import { CustomPipePipe } from './draft/custom-pipe.pipe';
+import {ProductModule} from './product/product.module';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 
 @NgModule({
@@ -23,12 +27,16 @@ import { PreviewComponent } from './setting-color/preview/preview.component';
     SettingColorComponent,
     SettingComponent,
     PreviewComponent,
+    CustomPipePipe,
+    NotFoundComponent,
+    ProductEditComponent,
 
   ],
   imports: [
     BrowserModule,
+    ProductModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

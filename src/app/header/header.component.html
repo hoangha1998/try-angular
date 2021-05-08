@@ -2,13 +2,22 @@
   <span class="logo">Angular</span>
   <ul class="menu">
     <li class="menu-item">
-      <a href="">Draft</a>
+      <a routerLink="" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Draft</a>
     </li>
     <li class="menu-item">
-      <a href="setting-template">Project 1</a>
+      <a routerLink="setting-template" [routerLinkActive]="'active'">Project 1</a>
     </li>
     <li class="menu-item">
-      <a href="setting-color">Project 2</a>
+      <a routerLink="setting-color" [routerLinkActive]="'active'">Project 2</a>
+    </li>
+    <li class="menu-item">
+      <a routerLink="products" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Products</a>
+    </li>
+    <li class="menu-item">
+      <div (click)="login()" class="btn btn-success">Login</div>
+    </li>
+    <li class="menu-item">
+      <div (click)="logout()" class="btn btn-danger">Logout</div>
     </li>
   </ul>
 </nav>
