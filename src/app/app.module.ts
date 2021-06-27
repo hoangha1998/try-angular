@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CollapseGroupComponent } from './collapse-group/collapse-group.component';
 import { CollapseComponent } from './collapse/collapse.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CollapseGroupComponent,
-    CollapseComponent
+    CollapseComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
